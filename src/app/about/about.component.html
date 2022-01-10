@@ -5,5 +5,27 @@
         impedit vel, iste laboriosam corporis maxime ratione nostrum libero quisquam necessitatibus, earum itaque
         commodi ex ut consequuntur illo quam rem architecto mollitia? Veniam, ullam id. Vero vitae reiciendis culpa
         sequi, at, dolore quidem eligendi aliquam quisquam, officiis ipsa nemo architecto sapiente modi debitis commodi
-        inventore ea. Quo alias debitis rem blanditiis incidunt ratione sed architecto in beatae hic, at eius?</p>
+        inventore ea. Quo alias debitis rem blanditiis incidunt ratione sed architecto in beatae hic, at eius?
+    </p>
+    <!-- If else statement -->
+    <p *ngIf="age>17 else elseBlock"> <button class="btn btn-lg btn-danger">Enter this questionable site.</button>
+    </p>
+    <ng-template #elseBlock>
+        <p>Sorry kiddo, You're not old enough!</p>
+    </ng-template>
+
+    <!-- Switch case -->
+    <div [ngSwitch]="location">
+        <span>The user's location is: </span> <span *ngSwitchCase="'Hyderabad'">Hyderabad</span>
+        <span *ngSwitchCase="'Delhi'">Delhi</span>
+        <span *ngSwitchCase="'Patna'">Patna</span>
+        <span *ngSwitchCase="'Ranchi'">Ranchi</span>
+    </div>
+    <!-- For statement -->
+    <p class="mt-3">The latest users are : </p>
+    <ul>
+        <li *ngFor="let user of myArr">
+            {{user}}
+        </li>
+    </ul>
 </div>

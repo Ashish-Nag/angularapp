@@ -1,0 +1,20 @@
+directives in angular: 
+
+    1> if directive : ngIf, a basic if else statement could be written in angular following similar patterns as shown in ABOUT COMPONENT of this project.
+
+    2> switch directive : ngSwitch, switch case statements also could be written in angular, as shown in the ABOUT COMPONENT of the project.
+        we use [ngSwitch]='<variable name>' as an attribute of the html element. 
+        and then we use *ngSwitchCase = "'<cases>'" as attribute of html element to check for cases.
+
+    3> for of : ngFor is used to iterate over an array or an object to create a tempalate, as shown in the ABOUT COMPONENT of the project. 
+        we use *ngFor = "let <variable> of <array/object defined in .ts file>" as an attribute of the html element, and inside that element we use {{<variable>}} for data interpolation. 
+
+
+Services: 
+    angular Services are the way to manipulate data across the whole angular application
+    
+    We use import and export keywords to send data of a service to application components
+
+    Services are the bridges between backend, api, databases and the front-end angular applications.
+
+    "ng g service" is the command for creating services.

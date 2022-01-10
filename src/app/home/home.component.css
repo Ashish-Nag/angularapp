@@ -1,0 +1,5 @@
+.container.mt-5 {
+  min-height: 60vh;
+  border: 1px solid grey;
+  border-radius: 6px;
+}
