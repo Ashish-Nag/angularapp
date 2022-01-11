@@ -1,0 +1,8 @@
+<div class="container mt-5">
+    <h2 class="text-black-50">Animations</h2>
+
+    <div [@anim]=" isOpen? 'open' : 'closed'" class="mt-3">
+        <p>Animation is {{isOpen? 'Open': 'Closed'}}</p>
+    </div>
+    <button class="btn btn-sm btn-danger" (click)="toggle()">Animate</button>
+</div>

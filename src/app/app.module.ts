@@ -15,20 +15,26 @@ import { FormsModule } from '@angular/forms';
 // * importing reactive form module. 
 import { ReactiveFormsModule } from '@angular/forms';
 
+// * importing browser animation module
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AnimComponent } from './anim/anim.component'
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AnimComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
