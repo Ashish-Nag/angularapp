@@ -6,7 +6,7 @@ directives in angular:
         we use [ngSwitch]='<variable name>' as an attribute of the html element. 
         and then we use *ngSwitchCase = "'<cases>'" as attribute of html element to check for cases.
 
-    3> for of : ngFor is used to iterate over an array or an object to create a tempalate, as shown in the ABOUT COMPONENT of the project. 
+    3> for of : ngFor is used to iterate over an array or an object to create a template, as shown in the ABOUT COMPONENT of the project. 
         we use *ngFor = "let <variable> of <array/object defined in .ts file>" as an attribute of the html element, and inside that element we use {{<variable>}} for data interpolation. 
 
 
@@ -23,3 +23,37 @@ HttpClient Library:
 
     - As angular is a front-end framework so for the back-end, we mostly need to use the HttpClient library.
     - It fetches the data over the http from api/back-end and makes it available for the angular front-end application via angular services.
+
+
+Angular Forms : 
+
+    Two types of forms in angular: 
+        - reactive forms
+        - template forms
+    
+    However the building blocks of these forms are common, 
+        - FormControl : used to keep track of the values and validation of each form control.
+        - FormGroup : which is used to track the same values along with the status for a collection of FormControl 
+        - FormArray : used to keep track of same values as mentioned before along with the status for an array of FormControl
+        - ControlValueAccessors : used to create links between FormControl instances and the original DOM elements.
+    
+    Differences between reactive forms and template driven forms  : 
+
+        - setup : 
+            reactive forms are built within the componenet class and they are more explicit.
+            Template driven forms are built within directives and they are less explicit.
+        - Data Flow : 
+            reactive forms elements directly associated to FormControl instance.
+            Template driven form elements directly associated with a directive.
+        - Validation : 
+            reactive form use functions
+            Template driven forms use directives.
+        -testing : 
+            reactive form are easy to test
+            Template driven form are complex for testing
+        -mutability : 
+            reactive forms are immutable. 
+            Template driven forms are mutable.
+        -scalability : 
+            reactive forms require low-level api access.
+            Template driven form requires abstraction on top of APIs

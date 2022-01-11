@@ -5,18 +5,27 @@
         </div>
         <div class="col-md-4 border border-dark rounded">
             <h2 class="text-black text-uppercase">Details</h2>
-            <form action="" class="form mt-5">
+            <!-- * type 1 : 
+                <form action="" class="form mt-5">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
-                    <input type="text" name="" id="name" class="form-control">
+                    <input type="text" name="" id="name" class="form-control" [formControl]="personName">
+                </div>
+
+                <div>
+                    <p>value : {{personName.value}}</p>
+                    <button (click)="refreshValue()" class="btn btn-danger btn-sm">Refresh</button>
+                </div> -->
+            <!-- * type 2 :  -->
+            <form action="" class="form mt-5" [formGroup]="personForm" (submit)="onSubmit()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+
+                    <input type="name" name="" id="name" class="form-control" formControlName="Name">
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" name="" id="email" class="form-control">
-                </div>
-                <div class="mb-3">
-                    <label for="phone" class="form-label">Phone</label>
-                    <input type="text" name="" id="phone" class="form-control">
+                    <label for="phone" class="form-label">Age</label>
+                    <input type="number" name="" id="phone" class="form-control" formControlName="Age">
                 </div>
                 <button class="btn btn-sm btn-danger float-end">Submit</button>
             </form>
