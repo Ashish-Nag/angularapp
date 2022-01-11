@@ -18,3 +18,8 @@ Services:
     Services are the bridges between backend, api, databases and the front-end angular applications.
 
     "ng g service" is the command for creating services.
+
+HttpClient Library: 
+
+    - As angular is a front-end framework so for the back-end, we mostly need to use the HttpClient library.
+    - It fetches the data over the http from api/back-end and makes it available for the angular front-end application via angular services.
